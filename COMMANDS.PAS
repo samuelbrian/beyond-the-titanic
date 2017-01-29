@@ -67,7 +67,7 @@ procedure DEAD;
      for c:=700 downto 20 do for b:=70 downto 1 do sound(b*c);nosound;
      close(Rooms1);close(rooms2);close(special1);close(special2);close(line1);
      gotoxy(1,23);DelLine;DelLine;writeln;write('Do you wish to play again? ');
-     read(kbd,flag);
+     flag := readkey;
      if(upcase(flag)<>'N')then
       begin
        writeln('Restarting...');window(1,1,80,25);
@@ -240,16 +240,16 @@ procedure SAVE;
     writeln('Remove the GAME disk and insert your SAVE/RESTORE disk ',
             'in drive A:')else
     writeln('Make sure your SAVE/RESTORE disk is in drive B:');
-   writeln('  (Press any key to continue...)');read(kbd,flag);
+   writeln('  (Press any key to continue...)');flag:=readkey;
    writeln;writeln;
-   write('Save under what name? ');BufLen:=8;readln(input);
+   write('Save under what name? ');readln(input);
    while pos(' ',input)>0 do delete(input,pos(' ',input),1);
    while pos('.',input)>0 do delete(input,pos('.',input),1);
    if(input='')then input:='LastRoom';
    writeln;writeln;input:=Drive+input;
    writeln('If your SAVE/RESTORE disk is in drive ',Drive,
             ' then press any key to start.');
-   read(kbd,flag);
+   flag := readkey;
    with DiskSave do
     begin
      aInven:=Inven;aKitSet:=KitSet;aCabiSet:=CabiSet;aPanelCon:=PanelCon;
@@ -283,7 +283,7 @@ procedure SAVE;
            ' SAVED to disk under the name ''',input,'.''');
    if(Drive='A:')then begin writeln;
     writeln('Remove the SAVE/RESTORE disk and insert your GAME disk.')end;
-   writeln('  (Press any key to continue...)');read(kbd,flag);
+   writeln('  (Press any key to continue...)');flag := readkey;
    writeln;writeln;
    if(Verb<>54)then writeln('You may now resume your game...');
    if(Line='')then Line:='look';Tic:=Tic-2;Back:=True;
@@ -306,16 +306,16 @@ procedure RESTORE;
     writeln('Remove the GAME disk and insert your SAVE/RESTORE disk ',
             'in drive ',Drive)else
     writeln('Make sure your SAVE/RESTORE disk is in drive B:');
-   writeln('  (Press any key to continue...)');read(kbd,flag);
+   writeln('  (Press any key to continue...)');flag := readkey;
    writeln;writeln;
-   write('Which file name do you want to RESTORE? ');BufLen:=8;readln(input);
+   write('Which file name do you want to RESTORE? ');readln(input);
    while pos(' ',input)>0 do delete(input,pos(' ',input),1);
    while pos('.',input)>0 do delete(input,pos('.',input),1);
    if(input='')then input:='LastRoom';
    writeln;writeln;input:=Drive+input;
    writeln('If your SAVE/RESTORE disk is now in drive ',Drive,
            ' then press any key to start.');
-   read(kbd,flag);
+   flag := readkey;
    if Exist then
     begin
      close(GameSave);
@@ -352,7 +352,7 @@ procedure RESTORE;
              ' RESTORED from the file ''',input,'.''');
      if(Drive='A:')then begin writeln;
       writeln('Remove the SAVE/RESTORE disk and insert your GAME disk.')end;
-     writeln('  (Press any key to continue...)');read(kbd,flag);
+     writeln('  (Press any key to continue...)');flag := readkey;
     end
    else
     begin writeln;TextColor(28);
@@ -362,7 +362,7 @@ procedure RESTORE;
      if(Drive='A:')then
       writeln('Put your GAME disk back in the disk drive and press any key.')
      else writeln('  (Press any key to continue...)');
-     read(kbd,flag);
+     flag := readkey;
     end;
    writeln;writeln;writeln('You may now resume you game...');
    if(Line='')then Line:='look';Tic:=Tic-2;Back:=True;
@@ -532,7 +532,7 @@ procedure Initialize;
    writeln('But first, two simple questions:');
    gotoxy(1,4);write('Are you using a COLOR screen (Y/N)? ');
    nosound; play(72,80,45);
-   read(kbd,flag); play(2500,2490,6);
+   flag := readkey; play(2500,2490,6);
    m0:=20;m1:=14;m2:=11;m3:=4;m4:=15;m5:=28;m6:=1;m7:=4;m8:=10;m9:=10;
    if upcase(flag)='N' then
     begin
@@ -541,7 +541,7 @@ procedure Initialize;
     end else writeln('Yes, I do have a color screen.');writeln;
    write('How many disk drives do you have (1/2)? ');
    play(80,88,30);
-   read(kbd,flag);play(2500,2490,6);
+   flag := readkey; play(2500,2490,6);
    Drive:='B:';
    if(upcase(flag)='O')or(flag='1')then
     begin Drive:='A:';writeln('I have ONE disk drive.')end else
@@ -554,7 +554,7 @@ procedure Initialize;
    cn('Written and Programmed by Scott Miller');
    textcolor(11);
    gotoxy(32,24);textcolor(7);
-   write('Press any key...');read(kbd,flag);clrscr;
+   write('Press any key...');flag := readkey;clrscr;
 
    {                      *** SHAREWARE SCREEN ***                            }
 
@@ -584,10 +584,10 @@ procedure Initialize;
    writeln('Thanks, enjoy the game...');
    gotoxy(23,25);
    delay(12000);
-   while keypressed do read(kbd,flag);
+   while keypressed do readkey;
    write('Press any key to start the game...');
-   read(kbd,flag);
-   while keypressed do read(kbd,flag);
+   readkey;
+   while keypressed do readkey;
    clrscr;
    {                      ************************                            }
 

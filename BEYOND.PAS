@@ -30,6 +30,8 @@
 
 { Last modified: July 23, 1987 }
 
+uses crt;
+
 const
      Q        = '#';
      VMax     = 65;
@@ -391,9 +393,9 @@ CASE VERB OF
                50,65,73,74,80,79,30])then RL(93) else RL(94);
 
 54         :begin write('Would you like to SAVE your game first (Y or N)?  ');
-             read(kbd,flag);if(upcase(flag)<>'N')then SAVE else writeln('No.');
+             flag := readkey;if(upcase(flag)<>'N')then SAVE else writeln('No.');
              write('Are you still sure you want to quit? ');
-             read(kbd,flag);if(upcase(flag)='Y')then
+             flag := readkey;if(upcase(flag)='Y')then
               begin RL(367);delay(999);window(1,1,80,25);clrscr;close(rooms1);
                close(rooms2);close(special1);close(special2);close(line1);
               HALT end else RL(264)end;
@@ -747,7 +749,7 @@ CASE VERB OF
              else Crazy
             else Crazy;
 
-61         :begin RL(245);read(kbd,flag);
+61         :begin RL(245);flag := readkey;
              if(upcase(flag)<>'N')then
               begin RL(380);delay(999);window(1,1,80,25);clrscr;close(rooms1);
                close(rooms2);close(special1);close(special2);close(line1);
@@ -1809,7 +1811,7 @@ procedure ScreenDraw_PlayerInput;
    gotoxy(10,1); writeln(Tic,'  '); gotoxy(75,1); writeln(Sc,' ');
    gotoxy(35-(length(Loc)div 2),1);writeln('     ',Loc,'     ');
    gotoxy(3,25);TextBackGround(0);Window(1,2,80,25);
-   textcolor(m1);BufLen:=77;
+   textcolor(m1);
    if(Loc<>'Civilization!')then READLN(LINE)else repeat;until false;
    if(Line='r')or(Line='repeat')then Line:=Again
    else Again:=Line;
