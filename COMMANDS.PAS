@@ -70,7 +70,8 @@ procedure DEAD;
      if(upcase(flag)<>'N')then
       begin
        writeln('Restarting...');window(1,1,80,25);
-       assign(rooms1,'BEYOND.COM');execute(rooms1)end
+       halt(executeProcess(ParamStr(0), '', []));
+      end
      else
       begin
        textcolor(7);
