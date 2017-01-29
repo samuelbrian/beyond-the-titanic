@@ -49,7 +49,6 @@ procedure Crazy;
 
 procedure DEAD;
     var b,c:integer;
-    FileName : file;
    begin SA; NoSound;
      gotoxy(1,25);for x:=1 to 7 do writeln;
      Textcolor(1);Textbackground(m9);
@@ -82,11 +81,7 @@ procedure DEAD;
        writeln('A Scott Miller Production');
        writeln('    Have a nice day...');
        delay(2000);
-       assign(FileName,'MENU.COM');
-       {$I-}
-       execute(FileName);
-       {$I+}
-       if IOResult <> 0 then HALT;
+       halt(0);
       end
    end;
 
