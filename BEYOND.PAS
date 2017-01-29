@@ -41,7 +41,7 @@ type
      ComSet         = set of 0..VMax;
      CharSet        = set of Char;
      PlayersObjects = set of 0..NMax;
-     Str14          = string[14];
+     Str16          = string[16];
      Str80          = string[80];
      Str240         = string[240];
      SaveGame       = record
@@ -62,12 +62,12 @@ type
        aRx       :integer;
        aEv       :CharSet;
        aCode,
-       aLoc      :Str14;
+       aLoc      :Str16;
        aKeyHole  :boolean;
       end;
 
 var
-     WordList       : file of Str14;
+     WordList       : file of Str16;
      Things         : file of integer;
      Objects        : file of PlayersObjects;
      GameSave       : file of SaveGame;
@@ -75,8 +75,8 @@ var
      Input,
      Again,
      Line           : Str80;
-     V{erb}         : array [0..VMax,1..5] of Str14;
-     N{oun}         : array [0..NMax,1..5] of Str14;
+     V{erb}         : array [0..VMax,1..5] of Str16;
+     N{oun}         : array [0..NMax,1..5] of Str16;
      R{oom}         : array [0..NMax] of integer;
      P{lace}        : array [0..RMax] of PlayersObjects;
      RmSh           : set of 0..14;
@@ -90,7 +90,7 @@ var
      Drive,
      Code,
      Loc{ation},
-     SepWord        : Str14;
+     SepWord        : Str16;
      Rooms1, Rooms2,
      Special1, Special2 : file of Str240;
      Text1, Text2   : Str240;

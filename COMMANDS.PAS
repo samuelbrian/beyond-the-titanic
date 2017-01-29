@@ -122,7 +122,7 @@ procedure Home;
      writeln('Reboot your computer to regain control...')
   end;
 
-procedure Say(o : integer; p : str14);
+procedure Say(o : integer; p : Str16);
    begin
      writeln('The ',n[o,1],' is already ',p,'.'); SA
    end;
@@ -155,7 +155,7 @@ procedure Monster(var NewRm : integer);
 
 procedure DescribeRm;
    var o : integer;
-  procedure s(r : str14);
+  procedure s(r : Str16);
      begin TextColor(m8);writeln(r);TextColor(m2);loc:=r;end;
    begin SA;
 if((en('a'))and(here(29)))or not(Prm in [6..24])then begin

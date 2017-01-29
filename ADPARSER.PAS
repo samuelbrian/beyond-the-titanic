@@ -56,7 +56,7 @@ procedure RL(RoomNum : integer);
 
 
 procedure Format(var input : Str80);
- procedure D(A:str14; B: Byte);
+ procedure D(A:Str16; B: Byte);
   begin while pos(A,input)<>0 do delete(input,pos(A,input),B) end;
    begin input:=input+' '; insert(' ',input,1);
     d(' of ',3); d(' go ',3); d('''',1); d('"',1); d(',',1);
@@ -122,7 +122,7 @@ procedure LowerCase(var input : Str80);
    end;   {of LowerCase}
 
 
-procedure FindVerb (var input:Str80;var Word:Str14;var Verb:integer);
+procedure FindVerb (var input:Str80;var Word:Str16;var Verb:integer);
    var j, k, r : integer;
    begin
    j:=1;
@@ -170,7 +170,7 @@ procedure FindVerb (var input:Str80;var Word:Str14;var Verb:integer);
    end;  {of FindVerb}
 
 
-procedure FindNoun(var input:Str80;var Word:Str14;var Noun:integer);
+procedure FindNoun(var input:Str80;var Word:Str16;var Noun:integer);
    var j, k, t  : integer;
    begin
    j:=1;
@@ -218,7 +218,7 @@ procedure FindNoun(var input:Str80;var Word:Str14;var Noun:integer);
    end;  {of FindNoun}
 
 
-procedure FindSep(var input : Str80; var h : Str14);
+procedure FindSep(var input : Str80; var h : Str16);
    var j  : integer;
    begin
      input:=input+' ';
@@ -252,7 +252,7 @@ procedure FindSep(var input : Str80; var h : Str14);
    end;  {of FindSep}
 
 
-procedure Check(var SepWord : Str14);
+procedure Check(var SepWord : Str16);
    var j  : integer;
    begin
    Verb:=Null; Noun:=Null; Noun2:=Null; DialNum:=Null; Flag:='?';
