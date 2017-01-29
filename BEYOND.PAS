@@ -26,7 +26,7 @@
 {*    Written by Scott Miller with Turbo Pascal V.2.  Began May 12, '84.    *}
 {*                           Shareware Version                              *}
 {*                             Copyright 1987                               *}
-{$C-,K-,V-,R-****************************************************************}
+{$C-,V-,R-*******************************************************************}
 
 { Last modified: July 23, 1987 }
 
