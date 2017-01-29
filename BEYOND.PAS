@@ -141,7 +141,6 @@ var
 
 {===================}
 procedure DefaultAnswers1;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -231,7 +230,6 @@ CASE VERB OF
 end;  {of DefaultAnswers1}
 {-------------------}
 procedure DefaultAnswers2;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -297,7 +295,6 @@ CASE VERB OF
 end;  {of DefaultAnswers2}
 {-------------------}
 procedure DefaultAnswers3;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -370,7 +367,6 @@ CASE VERB OF
 end;  {of DefaultAnswers3}
 {-------------------}
 procedure DefaultAnswers4;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -454,7 +450,6 @@ CASE VERB OF
 end;    {of DefaultAnswers4}
 {-------------------}
 procedure DefaultAnswers5;
-var o: integer;
 begin
 
 CASE VERB OF
@@ -496,7 +491,6 @@ CASE VERB OF
 end;  {of DefaultAnswers5}
 {-------------------}
 procedure DefaultAnswers6;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -611,7 +605,6 @@ CASE VERB OF
 end;  {of DefaultAnswers7}
 {-------------------}
 procedure DefaultAnswers8;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -671,7 +664,6 @@ CASE VERB OF
 end;  {of DefaultAnswers8}
 {-------------------}
 procedure DefaultAnswers9;
-var o : integer;
 begin
 
 CASE VERB OF
@@ -713,7 +705,6 @@ CASE VERB OF
 end;  {of DefaultAnswers9}
 {-------------------}
 procedure DefaultAnswers10;
-var o : integer;
 begin
 
 CASE VERB OF

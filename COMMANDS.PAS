@@ -48,7 +48,7 @@ procedure Crazy;
    end;
 
 procedure DEAD;
-    var b,c;
+    var b,c:integer;
     FileName : file;
    begin SA; NoSound;
      gotoxy(1,25);for x:=1 to 7 do writeln;
@@ -91,7 +91,7 @@ procedure DEAD;
    end;
 
 procedure Home;
-  var b,c:byte;
+  var b,c:integer;
    begin SA;
      gotoxy(1,25);for x:=1 to 7 do writeln;
      Textcolor(25);Textbackground(m7);
