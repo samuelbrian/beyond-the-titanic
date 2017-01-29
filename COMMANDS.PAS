@@ -495,7 +495,7 @@ case Prm of
 end;
 case Prm of
   5,6,9,10:if(random(9)=2)then RL(268);
-  7..40:if(here(84))and(random(20)=2)then RL(269)
+  7,8,11..40:if(here(84))and(random(20)=2)then RL(269)
         else if(random(75)=2)then RS(36)
         else if(Prm in[5..22])and(random(33)=2)then
          begin RL(265);play(6500,6950,0)end;

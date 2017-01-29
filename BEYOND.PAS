@@ -852,7 +852,7 @@ Case Prm of
 
 6       :case verb of
    46   :moveto(5);
-  43..52:if FlasOff then RL(14)
+  43..45,47..52:if FlasOff then RL(14)
          else case verb of
            43:begin Ox:=0;RL(286);moveto(7);end;
            45:moveto(9); 49:moveto(8);
@@ -880,7 +880,7 @@ Case Prm of
 
 8       :case verb of
    48,58:if FlasOff then RL(14) else moveto(6);
-  43..52:if FlasOff then RL(14);
+  43..47,49..52:if FlasOff then RL(14);
   11:if(noun in [46,79])then RS(12)
          else if(noun in [15,30])then RL(28);
    38 :if(noun=46)then begin SA;writeln('It feels jagged.');end;
@@ -896,7 +896,7 @@ Case Prm of
 10        :case verb of
    50,58 :if FlasOff then RL(14)
          else moveto(9);
-   43..52:if FlasOff then RL(14);
+   43..49,51..52:if FlasOff then RL(14);
   19,2:if(noun in[17,80])then begin RL(0);DEAD;end;
            end; {of 10}
 
@@ -914,7 +914,7 @@ Case Prm of
 14       :case verb of
    46,48 :if FlasOff then RL(14)
           else if(verb=46)then moveto(11) else moveto(15);
-  43..52 :if FlasOff then RL(14);
+  43..45,47,49..52 :if FlasOff then RL(14);
           end; {of 14}
 
 15     :case Verb of
@@ -1005,7 +1005,7 @@ Case Prm of
 23      :case verb of
    46,50 :if(flasoff)then RL(14)else moveto(21);
    43,48 :if(flasoff)then RL(14)else moveto(22);
-   44..49:RL(258);
+   44,45,47,49:RL(258);
    26,27 :if(noun=26)then
            if(en('l'))then Say(26,'open')
            else begin RL(98);Ev:=Ev+['l'];p[23]:=p[23]+[69];end;
@@ -1149,7 +1149,7 @@ Case Prm of
                n[66,4]:='red';
                    end;
         0..1111   :begin writeln;RS(31);DEAD;end;
-        1112..2110:begin writeln;RS(32);DEAD;end;
+        1112..1932,1934..2110:begin writeln;RS(32);DEAD;end;
         2680..3789:begin writeln;RS(33);DEAD;end
              else  begin writeln;RS(34);DEAD;end;
        end; {of YearDial case}
@@ -1247,7 +1247,7 @@ Case Prm of
     45  :moveto(39);
     46  :moveto(37);
     57  :if(noun=12)then RL(215);
-   0..99:if(noun=28)or(noun2=28)then
+   0..42,44,47,49..56,59..99:if(noun=28)or(noun2=28)then
           begin RS(35);RL(220);p[40]:=p[40]+[48];moveto(40);Ev:=Ev-['g'];
            if(MnRm=Prm)then begin RS(79);DEAD end
           end;
@@ -1307,14 +1307,14 @@ Case Prm of
     43  :moveto(43);
     46  :moveto(47);
     45  :begin RL(274);Rx:=0;moveto(46);end;
-  43..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
+  44,47..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
        end;
 
 45     :case verb of
     44  :moveto(49);
     46  :begin RL(274);Rx:=8;moveto(46);end;
     45  :begin Rx:=9;RL(274);moveto(46);end;
-  43..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
+  43,47..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
         end;
 
 46     :case verb of
@@ -1328,20 +1328,20 @@ Case Prm of
           if(Rx=8)then moveto(45);
           if(Rx<1)then moveto(44);
          end;
-  43..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
+  43,44,47..51,2,19:if(noun=Null)or(noun in[41,79])then RL(275);
         end;
 
 47     :case verb of
   46,52,2,19:begin if(random(2)=1)then begin RS(37);DropAll;moveto(48)end
                    else begin RL(277);moveto(48)end;end;
     45  :moveto(44);
-  43..50:RL(278);
+  43,44,47..50:RL(278);
         end;
 
 48     :case verb of
   45,51,2:if(random(3)=2)and(noun<>35)then begin RS(38);moveto(47)end
           else if(noun<>35)then RL(279);
-   43..50:RL(279);
+   43,44,46..50:RL(279);
      14  :if(noun in[27,1])and(27 in p[48])then
            begin Sc:=Sc+20;noun:=27;end;
      11 :if(noun=35)then RL(289)
@@ -1458,7 +1458,7 @@ Case Prm of
 
 58     :case verb of
    45,58:moveto(57);
-   43..51,20:if(en('i'))and(en('j'))and KeyHole then
+   43,44,46..51,20:if(en('i'))and(en('j'))and KeyHole then
          begin sound(38);RS(61);ShRm:=2;moveto(59);sound(20);
          for o:=0 to NMax do if(r[o]=58)then r[o]:=59;
          if not(en('S'))then begin Ev:=Ev+['S'];Sc:=Sc+60 end end else RL(325);
@@ -1471,7 +1471,7 @@ Case Prm of
    44,49:moveto(68);
    45,57:begin if not(en('w'))then begin Ev:=Ev+['w'];RL(346);end
                else begin RL(347);DEAD end end;
-   46..50:moveto(63);
+   46,48,50:moveto(63);
     58  :if(noun=Null)or(noun=65)then begin RL(342);DEAD;end;
     51  :begin sound(38);RL(344);delay(999);sound(20)end;
     52  :begin sound(30);RL(345);ShRm:=13;moveto(59);sound(20)end;
@@ -1499,7 +1499,7 @@ Case Prm of
     46  :begin RL(347);DEAD;end;
   43,48 :moveto(66);
   44,50 :moveto(68);
-  45..49:moveto(64);
+  45,47,49:moveto(64);
     58  :if(noun=Null)or(noun=65)then begin RL(342);DEAD;end;
     51  :begin sound(38);RL(344);delay(999);sound(20)end;
     52  :begin sound(30);RL(345);ShRm:=13;moveto(59);sound(20)end;
@@ -1522,7 +1522,7 @@ Case Prm of
    45   :moveto(65);
    47   :moveto(66);
    49   :moveto(68);
-  43..50:RL(343);
+  43,44,46,48,50:RL(343);
     58  :if(noun=Null)or(noun=65)then begin RL(342);DEAD;end;
     51  :begin sound(38);RL(344);delay(999);sound(20)end;
     52  :begin sound(30);RL(345);ShRm:=13;moveto(59);sound(20)end;
@@ -1534,7 +1534,7 @@ Case Prm of
    46   :moveto(67);
    48   :moveto(66);
    50   :moveto(68);
-  43..50:RL(343);
+  43..45,47,49:RL(343);
     58  :if(noun=Null)or(noun=65)then begin RL(342);DEAD;end;
     51  :begin sound(38);RL(344);delay(999);sound(20)end;
     52  :begin sound(30);RL(345);ShRm:=13;moveto(59);sound(20)end;
@@ -1621,7 +1621,7 @@ Case Prm of
              4:begin RL(18); moveto(11);end;
                47   :RL(17);
                 end;
-  43..52  :if FlasOff then RL(14);
+  43..46,48..52  :if FlasOff then RL(14);
    14  :if(noun in[70,1])and not(en('G'))then
          begin noun:=70;Ev:=Ev+['G'];Sc:=Sc+40;end;
    7   :if not(en('G'))then begin Ev:=Ev+['G'];RL(157);
@@ -1752,7 +1752,7 @@ Case Prm of
   45..50:RL(291);
     11  :if(noun in[26,50])then RL(292);
     2   :if(noun=72)then RL(312);
-    11  :if(noun=72)then RL(313);
+    // 11  :if(noun=72)then RL(313); // FIXME: Bug? Duplicate 11
         end;
 
 59     :case verb of
