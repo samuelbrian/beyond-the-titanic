@@ -1,0 +1,23 @@
+                             BEYOND THE TITANIC
+
+To start:   Put the game disk in drive A:, if you have two disk drives put a
+            formatted disk (it can contain other files) into drive B:.
+            This will be the SAVE/RESTORE disk.  You must use DOS 2.0 or
+            later.
+
+            For game instructions type the following from the DOS A> prompt:
+
+            INSTRUCT  <enter>
+
+            This will list the game instructions to the screen.
+
+Game hints: Try examining things and explore all of the rooms, a map is a
+            must.  As you play the game draw out small boxes on of piece of
+            grid paper, with lines leading to surrounding boxes (representing
+            passages.)
+
+            If the game is played perfectly, it will take the you at least
+            350 moves to solve everything and return home (San Francisco.)
+            On average the game will take over 2500 moves to complete!
+
+
