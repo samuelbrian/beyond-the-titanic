@@ -71,7 +71,7 @@ procedure DEAD;
      if(upcase(flag)<>'N')then
       begin
        writeln('Restarting...');window(1,1,80,25);
-       assign(rooms1,'BEYOND.com');execute(rooms1)end
+       assign(rooms1,'BEYOND.COM');execute(rooms1)end
      else
       begin
        textcolor(7);
@@ -632,8 +632,8 @@ Verbose     :=true;
 Attack      :=False;
 YearDial    :=135;
 DayDial     :=60;
-assign(rooms1,'rooms1');assign(rooms2,'rooms2');
-assign(special1,'special1');assign(special2,'special2');assign(line1,'line');
+assign(rooms1,'ROOMS1');assign(rooms2,'ROOMS2');
+assign(special1,'SPECIAL1');assign(special2,'SPECIAL2');assign(line1,'LINE');
 reset(rooms1);reset(rooms2);reset(special1);reset(special2);reset(line1);
 Str(Random(9998)+1,Code);
    DescribeRm; writeln; randomize;

@@ -753,7 +753,7 @@ CASE VERB OF
              if(upcase(flag)<>'N')then
               begin RL(380);delay(999);window(1,1,80,25);clrscr;close(rooms1);
                close(rooms2);close(special1);close(special2);close(line1);
-               assign(rooms1,'BEYOND.com');execute(rooms1)end
+               assign(rooms1,'BEYOND.COM');execute(rooms1)end
              else RL(264)
             end;
 
