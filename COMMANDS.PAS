@@ -42,13 +42,13 @@ function Here(noun : integer): Boolean;
      else Here:=False
    end;
 
-overlay procedure Crazy;
+procedure Crazy;
    begin SA;
     if(random(2)=1)then RL(107+random(7))else RL(300+random(6));
    end;
 
-overlay procedure DEAD;
-    var b,c:byte;
+procedure DEAD;
+    var b,c;
     FileName : file;
    begin SA; NoSound;
      gotoxy(1,25);for x:=1 to 7 do writeln;
@@ -90,7 +90,7 @@ overlay procedure DEAD;
       end
    end;
 
-overlay procedure Home;
+procedure Home;
   var b,c:byte;
    begin SA;
      gotoxy(1,25);for x:=1 to 7 do writeln;
@@ -122,12 +122,12 @@ overlay procedure Home;
      writeln('Reboot your computer to regain control...')
   end;
 
-overlay procedure Say(o : integer; p : str14);
+procedure Say(o : integer; p : str14);
    begin
      writeln('The ',n[o,1],' is already ',p,'.'); SA
    end;
 
-overlay procedure Diagnose;
+procedure Diagnose;
    begin
      RL(191);
      if((tic>42)and not(en('c')))or((tic>146)and not(en('n')))or(en('r'))then
@@ -139,7 +139,7 @@ overlay procedure Diagnose;
      else RL(207)
    end;
 
-overlay procedure Monster(var NewRm : integer);
+procedure Monster(var NewRm : integer);
    begin
     if(NewRm=MnRm)and(MnRm=25)then begin Attack:=False;RL(384)end else
     if(NewRm<>35)or not(en('v'))then
@@ -153,7 +153,7 @@ overlay procedure Monster(var NewRm : integer);
     else begin RL(383);Attack:=False end
    end;
 
-overlay procedure DescribeRm;
+procedure DescribeRm;
    var o : integer;
   procedure s(r : str14);
      begin TextColor(m8);writeln(r);TextColor(m2);loc:=r;end;
@@ -232,7 +232,7 @@ if((en('a'))and(here(29)))or not(Prm in [6..24])then begin
     else RL(54)
    end;  {of DescribeRm}
 
-overlay procedure SAVE;
+procedure SAVE;
    begin SA; for x:=1 to 24 do writeln; nosound;
    window(1,3,80,25);
    gotoxy(1,4);
@@ -291,7 +291,7 @@ overlay procedure SAVE;
    window(1,2,80,25)
    end; {of Save}
 
-overlay procedure RESTORE;
+procedure RESTORE;
  function Exist:Boolean;
  begin
  assign(GameSave,input+'.a');
@@ -370,7 +370,7 @@ overlay procedure RESTORE;
    window(1,2,80,25)
    end; {of Restore}
 
-overlay procedure Vanish(o : integer);
+procedure Vanish(o : integer);
    begin SA;
      inven:=inven-[o];
      r[o]:=Null;
@@ -388,7 +388,7 @@ overlay procedure Vanish(o : integer);
      if(o=RopeCon)and not(Verb in[9,14])then RopeCon:=Null
    end;
 
-overlay procedure Play( Start, Stop, Wait: integer);
+procedure Play( Start, Stop, Wait: integer);
    var x : integer;
    begin
     if(Start<=Stop)then
@@ -400,7 +400,7 @@ overlay procedure Play( Start, Stop, Wait: integer);
     if(Prm in[59..68])then sound(20)else nosound
    end; {of Play}
 
-overlay procedure DropAll;
+procedure DropAll;
    var o : integer;
    begin
      for o:= 0 to NMax do
@@ -521,7 +521,7 @@ function Present : Boolean;
     else Present:=true
    end;
 
-overlay procedure Initialize;
+procedure Initialize;
  procedure Cn(S : Str80);
  begin
   gotoxy(40-(length(S)div 2),wherey);writeln(S);

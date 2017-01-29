@@ -27,7 +27,7 @@
 {*  This include file to AdGame initializes all of the immoveable objects.   *}
 {*                         Copyright 1984 Pending                            *}
 {*****************************************************************************}
-overlay procedure Assign0;
+procedure Assign0;
 begin
                       {INITIALIZE OBJECT'S ROOMS}
 for o:=0 to NMax do r[o]:=Null;

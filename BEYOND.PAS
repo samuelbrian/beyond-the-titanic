@@ -140,7 +140,7 @@ var
 
 
 {===================}
-overlay procedure DefaultAnswers1;
+procedure DefaultAnswers1;
 var o : integer;
 begin
 
@@ -230,7 +230,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers1}
 {-------------------}
-overlay procedure DefaultAnswers2;
+procedure DefaultAnswers2;
 var o : integer;
 begin
 
@@ -296,7 +296,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers2}
 {-------------------}
-overlay procedure DefaultAnswers3;
+procedure DefaultAnswers3;
 var o : integer;
 begin
 
@@ -369,7 +369,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers3}
 {-------------------}
-overlay procedure DefaultAnswers4;
+procedure DefaultAnswers4;
 var o : integer;
 begin
 
@@ -453,7 +453,7 @@ CASE VERB OF
   end   {of CASE.}
 end;    {of DefaultAnswers4}
 {-------------------}
-overlay procedure DefaultAnswers5;
+procedure DefaultAnswers5;
 var o: integer;
 begin
 
@@ -495,7 +495,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers5}
 {-------------------}
-overlay procedure DefaultAnswers6;
+procedure DefaultAnswers6;
 var o : integer;
 begin
 
@@ -559,7 +559,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers6}
 {-------------------}
-overlay procedure DefaultAnswers7;
+procedure DefaultAnswers7;
 var o : integer;
 begin
 
@@ -610,7 +610,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers7}
 {-------------------}
-overlay procedure DefaultAnswers8;
+procedure DefaultAnswers8;
 var o : integer;
 begin
 
@@ -670,7 +670,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers8}
 {-------------------}
-overlay procedure DefaultAnswers9;
+procedure DefaultAnswers9;
 var o : integer;
 begin
 
@@ -712,7 +712,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers9}
 {-------------------}
-overlay procedure DefaultAnswers10;
+procedure DefaultAnswers10;
 var o : integer;
 begin
 
@@ -769,7 +769,7 @@ CASE VERB OF
   end {of case}
 end;  {of DefaultAnswers10}
 {===================}
-overlay procedure SpecialAnswers1;
+procedure SpecialAnswers1;
 
 begin
 FlagSA:='r';
@@ -847,7 +847,7 @@ end {of case}
 else SA
 end; {of SP1}
 {-------------------}
-overlay procedure SpecialAnswers2;
+procedure SpecialAnswers2;
 
 begin
 FlagSA:='r';
@@ -913,7 +913,7 @@ end {of case}
 else SA
 end; {of SP2}
 {-------------------}
-overlay procedure SpecialAnswers3;
+procedure SpecialAnswers3;
 
 begin
 FlagSA:='r';
@@ -971,7 +971,7 @@ end  {of Case}
 else SA
 end; {of SP3}
 {-------------------}
-overlay procedure SpecialAnswers4;
+procedure SpecialAnswers4;
 
 begin
 FlagSA:='r';
@@ -1045,7 +1045,7 @@ end   {of case}
 else SA
 end;  {of SP4}
 {-------------------}
-overlay procedure SpecialAnswers5;
+procedure SpecialAnswers5;
 
 begin
 FlagSA:='r';
@@ -1128,7 +1128,7 @@ end {of case}
 else SA
 end; {of SP5}
 {-------------------}
-overlay procedure SpecialAnswers6;
+procedure SpecialAnswers6;
 
 begin
 FlagSA:='r';
@@ -1202,7 +1202,7 @@ end  {of case}
 else SA
 end; {of SP6}
 {-------------------}
-overlay procedure SpecialAnswers7;
+procedure SpecialAnswers7;
 
 begin
 FlagSA:='r';
@@ -1282,7 +1282,7 @@ end  {of case}
 else SA
 end; {of SP7}
 {-------------------}
-overlay procedure SpecialAnswers8;
+procedure SpecialAnswers8;
 
 begin
 FlagSA:='r';
@@ -1360,7 +1360,7 @@ end  {of case}
 else SA
 end; {of SP8}
 {-------------------}
-overlay procedure SpecialAnswers9;
+procedure SpecialAnswers9;
 
 begin
 FlagSA:='r';
@@ -1447,7 +1447,7 @@ end  {of case}
 else SA
 end; {of SP9}
 {-------------------}
-overlay procedure SpecialAnswers10;
+procedure SpecialAnswers10;
 
 begin
 FlagSA:='r';
@@ -1520,7 +1520,7 @@ end  {of case}
 else SA
 end; {of SP10}
 {-------------------}
-overlay procedure SpecialAnswers11;
+procedure SpecialAnswers11;
 
 begin
 FlagSA:='r';
@@ -1599,7 +1599,7 @@ end  {of case}
 else SA
 end; {of SP11}
 {-------------------}
-overlay procedure SpecialAnswers12;
+procedure SpecialAnswers12;
 
 begin
 FlagSA:='r';
@@ -1666,7 +1666,7 @@ end  {of case}
 else SA
 end; {of SP12}
 {-------------------}
-overlay procedure SpecialAnswers13;
+procedure SpecialAnswers13;
 
 begin
 FlagSA:='r';
@@ -1748,7 +1748,7 @@ end  {of case}
 else SA
 end; {of SP13}
 {-------------------}
-overlay procedure SpecialAnswers14;
+procedure SpecialAnswers14;
 
 begin
 FlagSA:='r';

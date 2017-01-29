@@ -31,7 +31,7 @@
 {====================================START====================================}
 
                        {VERB LIST:  GROUPS ALL SYNONYMS}
-overlay procedure Assign1;
+procedure Assign1;
 begin
 for x:= 0 to VMax do for y:= 1 to 5 do v[x,y]:=Q;
 v[0,1]:='attack'; v[0,2]:='kill';v[0,3]:='beat up';
@@ -61,7 +61,7 @@ v[14,1]:='get';v[14,2]:='take';v[14,3]:='grab';v[14,4]:='steal';
 v[15,1]:='give';v[15,2]:='offer';v[15,3]:='show';v[15,4]:='pay';
    v[15,5]:='give away';
 end;
-overlay procedure Assign2;
+procedure Assign2;
 begin
 v[16,1]:='help';v[16,2]:='pray';
 v[17,1]:='hit';v[17,2]:='punch';v[17,3]:='knock';v[17,4]:='break';
@@ -90,7 +90,7 @@ v[30,1]:='reach';v[30,2]:='reach in';v[30,3]:='feel in';
 v[31,1]:='say';v[31,2]:='yell';v[31,3]:='shout';v[31,4]:='compute';
    v[31,5]:='think';
 end;
-overlay procedure Assign3;
+procedure Assign3;
 begin
 v[32,1]:='shoot';v[32,2]:='blast';v[32,3]:='fire at';v[32,4]:='fire';
    v[32,5]:='shoot at';
@@ -121,7 +121,7 @@ v[54,1]:='quit';v[54,2]:='stop';v[54,3]:='give up';v[54,4]:='i quit';
 v[55,1]:='take off';v[55,2]:='remove';
 v[56,1]:='shake';v[56,2]:='bogie';v[56,3]:='dance';
 end;
-overlay procedure Assign4;
+procedure Assign4;
 begin
 v[57,1]:='enter';v[57,2]:='in';v[57,3]:='land in';v[57,4]:='land on';
    v[57,5]:='land';
@@ -150,7 +150,7 @@ n[5,1]:='blue button';n[5,2]:='blue';
 n[6,1]:='boat';n[6,2]:='life boat';n[6,3]:='titanic';n[6,4]:='lifeboa';
    n[6,5]:='ship';
 end;
-overlay procedure Assign5;
+procedure Assign5;
 begin
 n[7,1]:='bottle';n[7,2]:='brown bottle';n[7,3]:='brown';
 n[8,1]:='black box';n[8,2]:='box';n[8,3]:='black';n[8,4]:='switch';
@@ -184,7 +184,7 @@ n[28,1]:='egg';n[28,2]:='eggs';
 n[29,1]:='flashlight';n[29,2]:='light';n[29,3]:='flashli';n[29,4]:='hook';
    n[29,5]:='ring';
 end;
-overlay procedure Assign6;
+procedure Assign6;
 begin
 n[30,1]:='ground';n[30,2]:='floor';n[30,3]:='earth';n[30,4]:='deck';
    n[30,5]:='bay';
@@ -225,7 +225,7 @@ n[55,1]:='red button';n[55,2]:='red';n[55,3]:='lower door';n[55,4]:='mangled';
    n[55,5]:='mangled door';
 n[56,1]:='right arm';n[56,2]:='right';n[56,3]:='arm';n[56,4]:='arms';
 end;
-overlay procedure Assign7;
+procedure Assign7;
 begin
 n[57,1]:='rope';n[57,2]:='thick';n[57,3]:='thick rope';
 n[58,1]:='screen';n[58,2]:='monitor';n[58,3]:='tv';n[58,4]:='screens';
@@ -253,7 +253,7 @@ n[71,1]:='rock feature';n[71,2]:='stalagt';
 n[72,1]:='strange wall';n[72,2]:='strange';n[72,3]:='hexagon';
    n[72,4]:='shapes';
 end;
-overlay procedure Assign8;
+procedure Assign8;
 begin
 n[73,1]:='water';n[73,2]:='river';n[73,3]:='stream';n[73,4]:='gusher';
    n[73,5]:='lake';
