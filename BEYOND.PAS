@@ -127,16 +127,16 @@ var
 
 
 
-{$Ia:AdParser.PAS}{  <--- Loads in sentence logic.    <*********************}
+{$I AdParser.PAS}{  <--- Loads in sentence logic.    <*********************}
 
 
-{$Ia:Commands.PAS}{  <--- Loads in misc. procedures.  <*********************}
+{$I Commands.PAS}{  <--- Loads in misc. procedures.  <*********************}
 
 
-{$Ia:WordList.PAS }{  <----- CALLS UP THE VERBS & NOUNS <*******************}
+{$I WordList.PAS }{  <----- CALLS UP THE VERBS & NOUNS <*******************}
 
 
-{$Ia:Objects.PAS }{   <----- CALLS UP THE VERBS & NOUNS <*******************}
+{$I Objects.PAS }{   <----- CALLS UP THE VERBS & NOUNS <*******************}
 
 
 {===================}
