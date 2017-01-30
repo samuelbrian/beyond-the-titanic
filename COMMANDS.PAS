@@ -586,8 +586,8 @@ procedure Initialize;
    while keypressed do readkey;
    clrscr;
    {                      ************************                            }
-
-   gotoxy(1,25);
+   Window(1,2,80,25);
+   gotoxy(1,24);
    TextColor(m1);
 cn('APRIL 14, 1912    11:43 PM');
 cn('You never knew the black canvas of the night was so full'+
@@ -633,6 +633,7 @@ assign(special1,'SPECIAL1');assign(special2,'SPECIAL2');assign(line1,'LINE');
 reset(rooms1);reset(rooms2);reset(special1);reset(special2);reset(line1);
 Str(Random(9998)+1,Code);
    DescribeRm; writeln; randomize;
+   Window(1,1,80,25);
    gotoxy(1,1);TextBackGround(m6);
    for x:=1 to 80 do write(' ');writeln;TextColor(m4);
    gotoxy(4,1);writeln('Move');gotoxy(68,1);writeln('Score');TextColor(m2);

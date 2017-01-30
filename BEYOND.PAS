@@ -1811,7 +1811,7 @@ procedure ScreenDraw_PlayerInput;
    gotoxy(1,1);textcolor(m4);TextBackGround(m6);
    gotoxy(10,1); writeln(Tic,'  '); gotoxy(75,1); writeln(Sc,' ');
    gotoxy(35-(length(Loc)div 2),1);writeln('     ',Loc,'     ');
-   gotoxy(3,25);TextBackGround(0);Window(1,2,80,25);
+   TextBackGround(0);Window(1,2,80,25);gotoxy(3,24);
    textcolor(m1);
    if(Loc<>'Civilization!')then READLN(LINE)else repeat;until false;
    if(Line='r')or(Line='repeat')then Line:=Again
