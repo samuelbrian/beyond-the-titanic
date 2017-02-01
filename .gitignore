@@ -1,9 +1,13 @@
 *.o
 BEYOND
+BEYOND.EXE
 SPECIAL
+SPECIAL.EXE
 ROOMRITE
+ROOMRITE.EXE
 LINERITE
-A:*
-B:*
+LINERITE.EXE
+A_*
+B_*
 BeyondTheTitanic-*.tar.gz
 BeyondTheTitanic-*.zip
