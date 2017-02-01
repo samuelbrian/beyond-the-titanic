@@ -1,14 +1,29 @@
+###############################################################################
+#                                   FUNCORP                                   #
+# 'Beyond the Titanic' makefile                                               #
+# Requires Free Pascal (v3.0.0 from freepascal.org)                           #
+###############################################################################
 
 PC := fpc
 FLAGS := -Mtp -O3 -Xt
 DEBUG_FLAGS := -Mtp -g -O1 -XD
 
+PLATFORM = Linux
 BEYOND_EXE = BEYOND
 SPECIAL_EXE = SPECIAL
 ROOMRITE_EXE = ROOMRITE
 LINERITE_EXE = LINERITE
 
+DIST_FILES = $(BEYOND_EXE) HELP.TXT HELP.SH INSTRUCT.TXT INSTRUCT.SH LINE ROOMS1 ROOMS2 SPECIAL1 SPECIAL2 LICENSE
+DIST_ARCHIVE = BeyondTheTitanic-$(PLATFORM).tar.gz
+
+.PHONY: all clean release
 all: $(BEYOND_EXE) # $(SPECIAL_EXE) $(ROOMRITE_EXE) $(LINERITE_EXE)
+
+release: $(DIST_ARCHIVE)
+
+clean:
+	rm -f *.o $(BEYOND_EXE) $(SPECIAL_EXE) $(ROOMRITE_EXE) $(LINERITE_EXE) $(DIST_ARCHIVE)
 
 $(BEYOND_EXE): BEYOND.PAS ADPARSER.PAS COMMANDS.PAS OBJECTS.PAS WORDLIST.PAS
 ifndef DEBUG
@@ -38,5 +53,5 @@ else
 	$(PC) $(DEBUG_FLAGS) -o$@ LINERITE.PAS
 endif
 
-clean:
-	rm -f *.o $(BEYOND_EXE) $(SPECIAL_EXE) $(ROOMRITE_EXE) $(LINERITE_EXE)
+$(DIST_ARCHIVE): $(DIST_FILES)
+	tar -acf $@ $(DIST_FILES)
