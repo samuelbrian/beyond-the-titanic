@@ -5,8 +5,8 @@
 ###############################################################################
 
 PC := fpc
-FLAGS := -Mtp -O3 -Xt
-DEBUG_FLAGS := -Mtp -g -O1 -XD
+FLAGS := -Mtp -O3 -Xt -dASCII_PROMPT_CHAR
+DEBUG_FLAGS := -Mtp -g -O1 -XD -dASCII_PROMPT_CHAR
 
 PLATFORM = Linux
 BEYOND_EXE = BEYOND
