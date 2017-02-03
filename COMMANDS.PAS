@@ -581,7 +581,7 @@ procedure Initialize;
    textcolor(7);
    writeln('Thanks, enjoy the game...');
    gotoxy(23,25);
-   delay(12000);
+   delay(3000);
    while keypressed do readkey;
    write('Press any key to start the game...');
    readkey;
