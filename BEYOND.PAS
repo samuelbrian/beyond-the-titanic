@@ -1804,14 +1804,22 @@ end  {of case}
 else SA
 end; {of SP14}
 {===================}
+function chr_p(c : byte) : char;
+  begin
+{$ifdef ASCII_TERMINAL}
+    case (c) of
+      175: chr_p := '>'; // as »
+    else
+      chr_p := chr(c);
+    end;
+{$else}
+    chr_p := chr(c);
+{$endif}
+  end;
+{===================}
 procedure ScreenDraw_PlayerInput;
   begin
-   gotoxy(1,23);writeln;TextColor(m5);
-{$ifdef ASCII_PROMPT_CHAR}
-   write('> ');
-{$else}
-   write(chr(175), ' ');
-{$endif}
+   gotoxy(1,23);writeln;TextColor(m5);write(chr_p(175), ' ');
    Window(1,1,80,25);
    gotoxy(1,1);textcolor(m4);TextBackGround(m6);
    gotoxy(10,1); writeln(Tic,'  '); gotoxy(75,1); writeln(Sc,' ');
@@ -1822,13 +1830,7 @@ procedure ScreenDraw_PlayerInput;
    if(Line='r')or(Line='repeat')then Line:=Again
    else Again:=Line;
 
-   gotoxy(1,23);TextColor(m3);
-{$ifdef ASCII_PROMPT_CHAR}
-   writeln('>');
-{$else}
-   writeln(chr(175));
-{$endif}
-   TextColor(m2);
+   gotoxy(1,23);TextColor(m3);writeln(chr_p(175));TextColor(m2);
   end;
 {-------------------}
 

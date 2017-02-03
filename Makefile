@@ -5,8 +5,8 @@
 ###############################################################################
 
 PC := fpc
-FLAGS := -Mtp -O3 -dASCII_PROMPT_CHAR
-DEBUG_FLAGS := -Mtp -g -O1 -XD -dASCII_PROMPT_CHAR
+FLAGS := -Mtp -O3 -dASCII_TERMINAL
+DEBUG_FLAGS := -Mtp -g -O1 -XD -dASCII_TERMINAL
 
 UNAME := $(shell uname -s)
 ifeq ($(UNAME), Linux)
