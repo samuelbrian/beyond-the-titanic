@@ -18,7 +18,7 @@ echo.
 echo -------------------------------------------------------------------------------
 echo Creating distribution archive BeyondTheTitanic-Win32.zip ...
 echo.
-zip BeyondTheTitanic-Win32.zip BEYOND.EXE HELP.TXT HELP.BAT INSTRUCT.TXT INSTRUCT.BAT LINE ROOMS1 ROOMS2 SPECIAL1 SPECIAL2 LICENSE FILE_ID.DIZ
+zip BeyondTheTitanic-Win32.zip BEYOND.EXE HELP.TXT HELP.BAT INSTRUCT.TXT INSTRUCT.BAT LINE ROOMS1 ROOMS2 SPECIAL1 SPECIAL2 LICENSE FILE_ID.DIZ FUNCORP.TXT
 
 echo.
 echo -------------------------------------------------------------------------------
