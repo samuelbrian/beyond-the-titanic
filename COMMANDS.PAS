@@ -243,6 +243,7 @@ procedure SAVE;
    while pos('.',input)>0 do delete(input,pos('.',input),1);
    if(input='')then input:='LastRoom';
    writeln;writeln;input:=Drive+input;
+   while pos(':',input)>0 do input[pos(':',input)] := '_';
    writeln('If your SAVE/RESTORE disk is in drive ',Drive,
             ' then press any key to start.');
    flag := readkey;
@@ -309,6 +310,7 @@ procedure RESTORE;
    while pos('.',input)>0 do delete(input,pos('.',input),1);
    if(input='')then input:='LastRoom';
    writeln;writeln;input:=Drive+input;
+   while pos(':',input)>0 do input[pos(':',input)] := '_';
    writeln('If your SAVE/RESTORE disk is now in drive ',Drive,
            ' then press any key to start.');
    flag := readkey;
